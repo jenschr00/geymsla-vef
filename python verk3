@@ -1,0 +1,22 @@
+from bottle import *
+@route("/")
+def index():
+    return template('verkefni3adal.tpl')
+
+@route("/a1")
+def a1():
+    return template('verkefni3.tpl')
+
+@route("/a/<kt>")
+def a(kt):
+    return template('v3aa.tpl',kt=kt)
+
+@route("/b")
+def b():
+    return template('verkefni3b.tpl')
+
+@route("/b1")
+def b1():
+    return template('v3b.tpl')
+
+run(host='localhost', port=8080)
